@@ -14,7 +14,7 @@ def api():
     if potencia_motor and velocidad_polea_motora and relac_transmision and fact_servicio:
       return jsonify(seleccionar_poleas(potencia_motor, velocidad_polea_motora, relac_transmision, fact_servicio))
     else:
-      return jsonify({"error": {"message": "Some variable missing", "status": 400}})
+      return Response('{"error": "Some variable missing"}', 400, mimetype='application/json')
 
 
 if __name__ == '__main__':
