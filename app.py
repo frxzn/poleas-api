@@ -1,10 +1,14 @@
 from flask import Flask, jsonify, request, Response
+from flask_cors import CORS, cross_origin
 from poleas import seleccionar_poleas
 
 app = Flask(__name__)
+cors = CORS(app)
+app.config['CORS_HEADERS'] = 'Content-Type'
 
 
 @app.route('/api')
+@cross_origin()
 def api():
     potencia_motor = request.args.get('potencia_motor')
     velocidad_polea_motora = request.args.get('velocidad_polea_motora')
