@@ -279,6 +279,7 @@ def seleccionar_poleas(potencia_motor, velocidad_polea_motora, relac_transmision
     velocidad_polea_motora = float(velocidad_polea_motora)
     relac_transmision = float(relac_transmision)
     fact_servicio = float(fact_servicio)
+    potencia_correa = 1
 
     diametro1_1canal_A = 0
     diametro2_1canal_A = 0
@@ -493,13 +494,6 @@ def seleccionar_poleas(potencia_motor, velocidad_polea_motora, relac_transmision
 
                     #"No hay solucion"
                     break
-
-    # resultados = [[[diametro1_1canal_A, diametro2_1canal_A], [diametro1_1canal_B, diametro2_1canal_B], [diametro1_1canal_C, diametro2_1canal_C]],
-    #               [[diametro1_2canales_A, diametro2_2canales_A], [diametro1_2canales_B,
-    #                                                               diametro2_2canales_B], [diametro1_2canales_C, diametro2_2canales_C]],
-    #               [[diametro1_3canales_A, diametro2_3canales_A], [diametro1_3canales_B,
-    #                                                               diametro2_3canales_B], [diametro1_3canales_C, diametro2_3canales_C]],
-    #               [[diametro1_4canales_A, diametro2_4canales_A], [diametro1_4canales_B, diametro2_4canales_B], [diametro1_4canales_C, diametro2_4canales_C]]]
 
     resultados = {
         'perfil_A': {
